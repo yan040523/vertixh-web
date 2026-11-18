@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vertixh Pro · Punto de venta, inventario e IPV para mipymes en Cuba</title>
+<meta name="description" content="Vertixh Pro: punto de venta, inventario, IPV, cuadre de caja contando billetes y contabilidad para tiendas, cafeterías y mipymes cubanas. Funciona sin internet, cobra en CUP y USD. Prueba gratis 30 días.">
+<link rel="canonical" href="https://yan040523.github.io/vertixh-web/">
+<meta name="theme-color" content="#0F2A57">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Vertixh Pro">
+<meta property="og:title" content="Vertixh Pro · Vende, cuadra la caja y sabe cuánto ganas">
+<meta property="og:description" content="Punto de venta para mipymes cubanas. Funciona sin internet, en el móvil y en la computadora. Prueba gratis 30 días.">
+<meta property="og:url" content="https://yan040523.github.io/vertixh-web/">
+<meta property="og:image" content="https://yan040523.github.io/vertixh-web/img/vista_previa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vertixh Pro: Vende. Controla. Crece.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yan040523.github.io/vertixh-web/img/vista_previa.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vertixh Pro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android, Web, Linux",
+  "inLanguage": "es",
+  "url": "https://yan040523.github.io/vertixh-web/",
+  "image": "https://yan040523.github.io/vertixh-web/img/vista_previa.jpg",
+  "description": "Punto de venta, inventario, IPV, cuadre de caja y contabilidad para mipymes cubanas. Funciona sin internet.",
+  "offers": [
+    { "@type": "Offer", "name": "Vertixh Inicio", "price": "500", "priceCurrency": "CUP" },
+    { "@type": "Offer", "name": "Vertixh Pro", "price": "1000", "priceCurrency": "CUP" },
+    { "@type": "Offer", "name": "Vertixh Empresa", "price": "2500", "priceCurrency": "CUP" }
+  ],
+  "author": { "@type": "Person", "name": "Yan Carlos Llamaret Gómez", "email": "yllamaretgomez@gmail.com", "telephone": "+5359252130" },
+  "publisher": { "@type": "Organization", "name": "Llamaret Developer" }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "¿Necesito internet para vender?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Vertixh Pro funciona completo sin conexión: vendes, cobras, imprimes y cierras la caja igual. Cuando hay internet, la app sincroniza sola cada pocos minutos y sube todo al servidor. También puedes sincronizar cuando quieras con el botón de la nube, arriba a la derecha."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo empiezo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Instala la app y escribe el código de activación que te dio tu proveedor. Crea tu PIN de dueño (4 a 6 números). No lo compartas. Carga tus productos: uno a uno, escaneando su código, o todos de golpe desde Excel en Productos → Importar desde Excel. Abre la caja y empieza a vender."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo pongo a vender a un dependiente en otro teléfono?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En tu teléfono, ve a Más → Usuarios y PIN y crea al dependiente como Cajero, con su propio PIN. En el teléfono del dependiente, instala la app y escribe el mismo código de activación de tu negocio. El dependiente entra con su PIN de cajero. Activa siempre tu teléfono (el del dueño) primero. Cada teléfono cuenta como un dispositivo de tu plan."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo veo desde mi teléfono lo que vende el dependiente?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Los dos teléfonos sincronizan solos cada 3 minutos cuando tienen internet. En Más → Turnos de caja ves cada turno: sus ventas, cómo se cobró, los gastos y el cuadre. Desde ahí puedes anular o corregir ventas sin abrir caja. También tienes los Reportes, el IPV y el panel web del dueño."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Me equivoqué en una venta, ¿cómo la corrijo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En Ventas del turno (o en Turnos de caja, si eres el dueño) toca la venta: Anular venta: la mercancía vuelve al inventario y el dinero deja de contar en la caja. Editar venta: cambia cantidades, quita o agrega productos y cobra de nuevo. La venta original queda anulada como \"Venta editada\" y la corregida la reemplaza en el mismo turno. Solo el dueño o el jefe de turno pueden anular y editar."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Por qué no me deja vender un producto?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Porque no hay existencia suficiente. Vertixh Pro no deja vender lo que no hay. Dale entrada a la mercancía (en la ficha del producto → Entrada, o registrando la compra) y ya podrás venderlo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo hago el cuadre al final del turno?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En la caja, menú de la caja → Cerrar caja: cuenta el efectivo y escribe lo que hay. La app te dice si sobra o falta. Imprime el cuadre del día (menú de la caja → Imprimir cuadre del día). Revisa el IPV (Más → IPV): inicio, entradas, vendido y final de cada producto. Puedes imprimirlo o descargarlo en PDF, Word o Excel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Puedo cobrar en dólares?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí, en los planes Vertixh Pro y Empresa. Fija la tasa del día en Más → Tasa del USD. Al cobrar puedes combinar pagos: parte en USD y parte en CUP, en efectivo, Transfermóvil o EnZona. El vuelto se calcula solo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué pasa si se me rompe o pierdo el teléfono?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Todo lo que ya se sincronizó está a salvo en el servidor. Instala la app en otro teléfono, escribe tu código de activación y entra con tu PIN: se baja todo. Lo único que se pierde es lo que no llegó a sincronizarse; por eso conviene tener internet de vez en cuando."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Puedo usar la app en varios negocios?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí. En Más → Salir de este negocio, el teléfono sube todo lo pendiente y queda libre. Después escribes el código de activación del otro negocio. Los datos de cada negocio quedan separados y guardados en el servidor."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué impresoras sirven?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En el teléfono: impresoras térmicas Bluetooth de 58 u 80 mm (ESC/POS). Se emparejan en el Bluetooth del teléfono y se eligen en Más → Tickets e impresora. En la computadora: cualquier impresora instalada en el sistema. El cajón de dinero se conecta a la impresora térmica y se abre solo al cobrar en efectivo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Los reportes de impuestos sirven para la ONAT?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Son una estimación hecha con tus ventas, gastos y las tasas que configures. Te ayudan a preparar la declaración, pero revísalos con tu contador antes de presentarlos."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué pasa si se vence mi licencia?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tienes 7 días de gracia en los que todo sigue igual. Después, la app pasa a solo lectura: puedes ver tus datos y reportes, pero no vender, hasta que renueves. Tus datos no se borran."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Mis datos están seguros? ¿Quién los ve?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tus datos son tuyos. Cada usuario entra con su PIN y solo ve lo que su rol permite (por ejemplo, el cajero no ve costos ni ganancias). El proveedor no vende ni comparte tus datos y solo los consulta si hace falta para darte soporte. Puedes pedir una copia completa de tus datos cuando quieras."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo pido ayuda?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Escribe o llama a Yan Carlos Llamaret Gómez (Llamaret Developer): +53 5925 2130 (también WhatsApp) o yllamaretgomez@gmail.com. Tienes los botones en Más → Ayuda y contacto."
+   }
+  }
+ ]
+}
+</script>
+
+<style>
+@font-face{font-family:"Jakarta";src:url(fuentes/PlusJakartaSans-Medium.ttf) format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(fuentes/PlusJakartaSans-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(fuentes/PlusJakartaSans-ExtraBold.ttf) format("truetype");font-weight:800;font-display:swap}
+:root{
+  --noche:#0F2A57; --noche-2:#163A73; --azul:#2457A6; --azul-claro:#DCE6F5;
+  --verde:#7FD3A2; --verde-osc:#1E7A4C; --rojo:#C8412F;
+  --crema:#FBF7F1; --papel:#FFFDF7; --tinta:#1F2430; --piedra:#5E5A55; --linea:#E6DED1;
+  --ancho:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Jakarta",system-ui,"Segoe UI",Roboto,sans-serif;font-weight:500;color:var(--tinta);background:var(--crema);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--azul)}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:6px}
+.w{max-width:var(--ancho);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.12;margin:0 0 .45em;font-weight:800;letter-spacing:-.022em}
+h1{font-size:clamp(2.3rem,5.6vw,4rem)}
+h2{font-size:clamp(1.75rem,3.8vw,2.7rem)}
+h3{font-size:1.18rem;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.sub{font-size:1.14rem;color:var(--piedra);max-width:60ch}
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:14px;font-weight:800;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.boton:hover{transform:translateY(-2px)}
+.boton svg{width:20px;height:20px;flex:none}
+.b-verde{background:var(--verde);color:var(--noche)}
+.b-verde:hover{background:#94DCB1}
+.b-linea{border-color:rgba(255,255,255,.55);color:#fff}
+.b-linea:hover{border-color:#fff}
+.b-azul{background:var(--azul);color:#fff}
+.b-contorno{border-color:var(--azul);color:var(--azul);background:transparent}
+
+/* ---------- Cabecera ---------- */
+header{position:sticky;top:0;z-index:20;background:rgba(15,42,87,.94);backdrop-filter:blur(8px);color:#fff}
+header .w{display:flex;align-items:center;gap:20px;height:66px}
+.marca{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:1.32rem;letter-spacing:-.02em}
+.marca img{width:34px;height:34px;border-radius:9px}
+.pro{background:var(--rojo);border-radius:6px;font-size:.68rem;padding:3px 7px;letter-spacing:.06em}
+header nav{margin-left:auto;display:flex;gap:24px;align-items:center}
+header nav a{color:#fff;text-decoration:none;font-weight:700;opacity:.82}
+header nav a:hover{opacity:1}
+header nav .boton{padding:10px 16px;font-size:.92rem;opacity:1}
+@media (max-width:820px){header nav a:not(.boton){display:none}}
+
+/* ---------- Portada ---------- */
+.portada{background:var(--noche);color:#fff;overflow:hidden;position:relative}
+.portada::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 85% 30%,#24579666,transparent 70%);pointer-events:none}
+.portada .w{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding-top:64px;padding-bottom:76px}
+.portada h1{max-width:13ch}
+.portada .sub{color:#C9D6EC}
+.botones{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 18px}
+.nota{font-size:.92rem;color:#A9BBDA}
+.nota a{color:#fff}
+.escena{position:relative;justify-self:center;width:min(440px,92vw);height:560px}
+.telefono{position:absolute;right:0;top:0;width:290px;border-radius:38px;border:10px solid #0A1A36;background:#0A1A36;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);overflow:hidden}
+.telefono img{border-radius:28px}
+/* El ticket térmico que se imprime */
+.ticket{position:absolute;left:0;bottom:-6px;width:236px;background:var(--papel);color:#222;padding:18px 16px 26px;
+  font:13px/1.45 "Courier New",ui-monospace,monospace;box-shadow:0 24px 50px -18px rgba(0,0,0,.55);transform:rotate(-4deg);transform-origin:bottom left;
+  --diente:radial-gradient(circle at 6px 0,transparent 5px,var(--papel) 5.5px);
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 7px) no-repeat,var(--diente) bottom/12px 7px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 7px) no-repeat,var(--diente) bottom/12px 7px repeat-x}
+.ticket .t-neg{font-weight:700;text-align:center;letter-spacing:.04em}
+.ticket .t-c{text-align:center;color:#555;font-size:12px}
+.ticket hr{border:0;border-top:1px dashed #999;margin:7px 0}
+.ticket .t-l{display:flex;justify-content:space-between;gap:8px;white-space:nowrap}
+.ticket .t-l span:first-child{overflow:hidden;text-overflow:ellipsis}
+.ticket .t-total{font-weight:700;font-size:15px}
+.cuadra{position:absolute;left:150px;bottom:-26px;background:var(--verde);color:var(--noche);font-weight:800;border-radius:999px;padding:9px 16px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);display:flex;gap:8px;align-items:center;font-size:.95rem}
+.cuadra svg{width:18px;height:18px}
+/* Una sola animación en la página: el ticket se imprime línea a línea al cargar */
+@media (prefers-reduced-motion:no-preference){
+  .ticket>*{opacity:0;animation:linea .32s ease-out forwards;animation-delay:calc(.5s + var(--i) * .2s)}
+  .ticket{animation:sale .9s cubic-bezier(.2,.7,.2,1) .25s both}
+  .cuadra{animation:sello .45s cubic-bezier(.3,1.6,.5,1) 3.4s both}
+}
+@keyframes linea{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@keyframes sale{from{transform:rotate(-4deg) translateY(60px);opacity:0}to{transform:rotate(-4deg);opacity:1}}
+@keyframes sello{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@media (max-width:900px){
+  .portada .w{grid-template-columns:1fr;padding-top:44px}
+  .escena{height:520px;margin-top:8px}
+}
+@media (max-width:420px){.telefono{width:236px}.ticket{width:206px;font-size:12px}.escena{height:470px}.cuadra{left:110px}}
+
+/* ---------- Hechos ---------- */
+.hechos{background:#fff;border-bottom:1px solid var(--linea)}
+.hechos ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.hechos li{display:flex;gap:12px;align-items:flex-start;font-weight:700;line-height:1.35}
+.hechos li small{display:block;font-weight:500;color:var(--piedra);font-size:.88rem;margin-top:2px}
+.hechos svg{width:26px;height:26px;flex:none;color:var(--azul);margin-top:2px}
+@media (max-width:860px){.hechos ul{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.hechos ul{grid-template-columns:1fr}}
+
+section{padding:88px 0}
+.cabeza{max-width:720px;margin-bottom:44px}
+
+/* ---------- Un día en la caja (pasos) ---------- */
+.dia{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.pasos{list-style:none;margin:0;padding:0;counter-reset:paso;border-left:2px solid var(--linea)}
+.pasos li{counter-increment:paso}
+.pasos button{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:14px 16px 14px 56px;position:relative;margin-left:-2px;border-left:2px solid transparent;font-weight:700;color:var(--piedra);line-height:1.3}
+.pasos button::before{content:counter(paso);position:absolute;left:14px;top:12px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--linea);color:var(--tinta);font-weight:800;font-size:.9rem}
+.pasos button small{display:block;font-weight:500;font-size:.88rem;margin-top:3px}
+.pasos button[aria-selected=true]{color:var(--tinta);border-left-color:var(--azul)}
+.pasos button[aria-selected=true]::before{background:var(--azul);color:#fff}
+.pasos button:focus-visible{outline:3px solid var(--verde);outline-offset:-3px}
+.panel{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:40px;align-items:center}
+.panel[hidden]{display:none}
+.panel .pantalla{border-radius:30px;border:8px solid #0A1A36;background:#0A1A36;box-shadow:0 30px 60px -30px rgba(15,42,87,.55);overflow:hidden}
+.panel .pantalla img{border-radius:22px}
+.panel h3{font-size:1.6rem;margin-bottom:.5em}
+.panel ul{padding-left:20px;margin:0;color:var(--piedra)}
+.panel li{margin:7px 0}
+.panel li b{color:var(--tinta)}
+@media (max-width:960px){.dia{grid-template-columns:1fr}.pasos{display:flex;overflow-x:auto;border-left:0;border-bottom:2px solid var(--linea);gap:4px;scrollbar-width:none}
+  .pasos button{white-space:nowrap;padding:10px 12px 10px 46px;border-left:0;border-bottom:2px solid transparent;margin:0 0 -2px}
+  .pasos button small{display:none}.pasos button::before{left:10px;top:7px}
+  .pasos button[aria-selected=true]{border-bottom-color:var(--azul)}}
+@media (max-width:640px){.panel{grid-template-columns:1fr}.panel .pantalla{max-width:280px}}
+
+/* ---------- Para el dueño ---------- */
+.dueno{background:#fff;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.dueno-cab{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;margin-bottom:34px}
+.dueno-cab .cabeza{margin:0}
+.interruptor{display:inline-flex;background:var(--crema);border:1px solid var(--linea);border-radius:999px;padding:4px}
+.interruptor button{all:unset;cursor:pointer;padding:9px 18px;border-radius:999px;font-weight:700;color:var(--piedra)}
+.interruptor button[aria-pressed=true]{background:var(--noche);color:#fff}
+.interruptor button:focus-visible{outline:3px solid var(--verde)}
+.laptop{max-width:980px;margin:0 auto;border-radius:16px;border:9px solid #0A1A36;border-bottom-width:22px;background:#0A1A36;box-shadow:0 40px 80px -40px rgba(15,42,87,.6);overflow:hidden}
+.laptop img{border-radius:6px}
+.ventajas{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px;margin-top:56px}
+.ventajas h3{display:flex;gap:10px;align-items:center}
+.ventajas svg{width:22px;height:22px;color:var(--azul);flex:none}
+.ventajas p{color:var(--piedra);margin:0}
+@media (max-width:860px){.ventajas{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ventajas{grid-template-columns:1fr}}
+
+/* ---------- Todo lo que hace ---------- */
+.lista{columns:2;column-gap:56px}
+.lista div{break-inside:avoid;padding:16px 0;border-top:1px solid var(--linea)}
+.lista h3{font-size:1.05rem;margin-bottom:.25em}
+.lista p{margin:0;color:var(--piedra)}
+@media (max-width:720px){.lista{columns:1}}
+
+/* ---------- Sin internet ---------- */
+.sinred{background:var(--noche);color:#fff}
+.sinred .w{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.sinred .sub{color:#C9D6EC}
+.promesas{list-style:none;margin:0;padding:0}
+.promesas li{padding:18px 0 18px 46px;border-top:1px solid rgba(255,255,255,.14);position:relative}
+.promesas li::before{content:"";position:absolute;left:4px;top:21px;width:22px;height:22px;border-radius:50%;background:var(--verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F2A57' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat}
+.promesas b{display:block;font-size:1.06rem}
+.promesas span{color:#C9D6EC}
+@media (max-width:860px){.sinred .w{grid-template-columns:1fr}}
+
+/* ---------- Planes ---------- */
+.planes{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:16px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:26px 22px;display:flex;flex-direction:column}
+.plan.prueba{background:var(--noche);color:#fff;border-color:var(--noche)}
+.plan.prueba .limite,.plan.prueba li{color:#C9D6EC}
+.plan.recomendado{border:2px solid var(--azul)}
+.plan .etiqueta{align-self:flex-start;background:var(--azul);color:#fff;border-radius:999px;font-size:.78rem;font-weight:800;padding:4px 12px;margin-bottom:12px}
+.precio{font-size:2.5rem;font-weight:800;letter-spacing:-.03em;line-height:1;margin:6px 0 4px}
+.precio small{display:block;font-size:.92rem;font-weight:700;letter-spacing:0;color:var(--piedra);margin-top:6px}
+.plan.prueba .precio small{color:#C9D6EC}
+.limite{color:var(--piedra);font-weight:700;margin-bottom:14px;font-size:.95rem}
+.plan ul{padding-left:20px;margin:0 0 22px;flex:1;color:var(--piedra)}
+.plan li{margin:6px 0}
+.aviso-precios{color:var(--piedra);font-size:.92rem;margin-top:18px}
+@media (max-width:1100px){.planes{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.planes{grid-template-columns:1fr}}
+
+/* ---------- Empezar / descargar ---------- */
+.empezar{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.opcion{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:28px}
+.opcion .boton{margin-top:6px}
+.instalar{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:inst}
+.instalar li{counter-increment:inst;font-size:.9rem;color:var(--piedra)}
+.mini{height:150px;border-radius:16px;background:var(--crema);border:6px solid #0A1A36;padding:10px 8px;margin-bottom:8px;display:flex;flex-direction:column;gap:6px;font-size:.66rem;line-height:1.25;color:var(--tinta)}
+.mini .barra{height:8px;border-radius:4px;background:var(--linea)}
+.mini .barra.c{width:60%}
+.mini .alerta{background:#fff;border-radius:8px;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.mini .btn{align-self:flex-end;background:var(--azul);color:#fff;border-radius:6px;padding:3px 7px;font-weight:700}
+.mini .sw{display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:8px;padding:6px}
+.mini .sw i{width:24px;height:13px;border-radius:7px;background:var(--verde-osc);position:relative}
+.mini .sw i::after{content:"";position:absolute;right:2px;top:2px;width:9px;height:9px;border-radius:50%;background:#fff}
+.instalar li::before{content:counter(inst) ". ";font-weight:800;color:var(--tinta)}
+@media (max-width:860px){.empezar{grid-template-columns:1fr}}
+@media (max-width:440px){.instalar{grid-template-columns:1fr 1fr}}
+
+/* ---------- Guías ---------- */
+.guias{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.guia{display:block;text-decoration:none;color:var(--tinta);background:#fff;border:1px solid var(--linea);border-radius:18px;padding:20px 22px}
+.guia:hover{border-color:var(--azul)}
+.guia b{display:block;font-size:1.05rem;margin-bottom:4px}
+.guia span{color:var(--piedra);font-size:.95rem}
+
+/* ---------- Preguntas ---------- */
+.preguntas{max-width:820px}
+.preguntas details{border-top:1px solid var(--linea)}
+.preguntas details:last-child{border-bottom:1px solid var(--linea)}
+.preguntas summary{cursor:pointer;font-weight:800;padding:20px 40px 20px 0;list-style:none;position:relative;font-size:1.06rem}
+.preguntas summary::-webkit-details-marker{display:none}
+.preguntas summary::after{content:"";position:absolute;right:6px;top:26px;width:10px;height:10px;border-right:2.5px solid var(--azul);border-bottom:2.5px solid var(--azul);transform:rotate(45deg);transition:transform .2s}
+.preguntas details[open] summary::after{transform:rotate(-135deg);top:30px}
+.preguntas .respuesta{padding-bottom:18px;color:var(--piedra)}
+.preguntas .respuesta ul,.preguntas .respuesta ol{padding-left:22px}
+
+/* ---------- Final ---------- */
+.final{background:var(--azul);color:#fff;border-radius:30px;padding:60px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+.final .sub{color:#DCE6F5;margin:0}
+.final .botones{margin:0;justify-content:flex-end}
+@media (max-width:820px){.final{grid-template-columns:1fr;padding:44px 26px}.final .botones{justify-content:flex-start}}
+
+footer{padding:44px 0 90px;color:var(--piedra);font-size:.93rem}
+footer .w{display:flex;flex-wrap:wrap;gap:16px 36px;justify-content:space-between}
+footer a{color:var(--piedra)}
+.firma{font-weight:800;color:var(--tinta)}
+
+/* Botón flotante de WhatsApp */
+.flotante{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4)}
+.flotante svg{width:30px;height:30px;color:#fff}
+.flotante:hover{transform:scale(1.06)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="w">
+    <a class="marca" href="./" aria-label="Vertixh Pro, inicio">
+      <img src="img/simbolo.png" alt="" width="34" height="34">Vertixh <span class="pro">PRO</span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#un-dia">Cómo funciona</a>
+      <a href="#planes">Planes</a>
+      <a href="#guias">Guías</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="boton b-verde" href="app/">Probar gratis</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="portada" aria-labelledby="titulo">
+  <div class="w">
+    <div>
+      <h1 id="titulo">Vende, cuadra la caja y sabe cuánto ganas.</h1>
+      <p class="sub">Vertixh Pro es el punto de venta para tiendas, cafeterías y mipymes cubanas. Cobra en CUP o USD, controla la mercancía y saca el IPV al cerrar. Funciona sin internet, en el móvil y en la computadora.</p>
+      <div class="botones">
+        <a class="boton b-verde" href="app/">Probar gratis 30 días</a>
+        <a class="boton b-linea" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20probar%20Vertixh%20Pro%20en%20mi%20negocio." rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5c-.1-.1-.6-1.3-.8-1.8s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+          Escríbenos
+        </a>
+      </div>
+      <p class="nota">Sin tarjeta ni compromiso: abres la app, pones el nombre de tu negocio y empiezas. En Android te mandamos el instalador por WhatsApp; pronto estará en Apklis.</p>
+    </div>
+
+    <div class="escena" aria-hidden="true">
+      <div class="telefono"><img src="img/movil_vender.webp" width="600" height="1298" alt=""></div>
+      <div class="ticket">
+        <div class="t-neg" style="--i:0">MIPYME LA ESQUINA</div>
+        <div class="t-c" style="--i:1">Ticket C1-0042 · 18/11 10:42</div>
+        <hr style="--i:2">
+        <div class="t-l" style="--i:3"><span>3 Cerveza lata</span><span>750,00</span></div>
+        <div class="t-l" style="--i:4"><span>3 Aceite girasol</span><span>2.850,00</span></div>
+        <div class="t-l" style="--i:5"><span>6 Arroz 1 kg</span><span>1.920,00</span></div>
+        <hr style="--i:6">
+        <div class="t-l t-total" style="--i:7"><span>TOTAL CUP</span><span>5.520,00</span></div>
+        <div class="t-l" style="--i:8"><span>Transfermóvil</span><span>5.520,00</span></div>
+        <div class="t-c" style="--i:9;margin-top:8px">Gracias por su compra</div>
+      </div>
+      <div class="cuadra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg>Caja del día: cuadra</div>
+    </div>
+  </div>
+</section>
+
+<div class="hechos">
+  <div class="w">
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M3 3l18 18"/></svg><div>Funciona sin internet<small>Vendes aunque se caiga la conexión</small></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.6 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg><div>CUP y USD<small>Efectivo, Transfermóvil y EnZona</small></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="13" height="10" rx="2"/><rect x="15" y="9" width="7" height="11" rx="2"/><path d="M5 19h7"/></svg><div>Varias cajas a la vez<small>Móvil, tableta y computadora sincronizados</small></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 4h6l1 2h3a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3l1-2z"/><path d="M8 12h8M8 16h5"/></svg><div>IPV y contabilidad<small>Listos para imprimir o exportar</small></div></li>
+    </ul>
+  </div>
+</div>
+
+<section id="un-dia" aria-labelledby="t-dia">
+  <div class="w">
+    <div class="cabeza">
+      <h2 id="t-dia">Un día en la caja, de la apertura al cuadre</h2>
+      <p class="sub">Así se usa en un negocio de verdad. Cada pantalla es la app tal como la verás.</p>
+    </div>
+    <div class="dia">
+      <ol class="pasos" role="tablist" aria-label="Pasos del día">
+        <li><button role="tab" id="p1" aria-controls="v1" aria-selected="true">Vender<small>Toca, escanea o busca el producto</small></button></li>
+        <li><button role="tab" id="p2" aria-controls="v2" aria-selected="false" tabindex="-1">Retirar a mediodía<small>El efectivo va a la caja del dueño</small></button></li>
+        <li><button role="tab" id="p3" aria-controls="v3" aria-selected="false" tabindex="-1">Contar billetes<small>9 de 1.000 son 9.000</small></button></li>
+        <li><button role="tab" id="p4" aria-controls="v4" aria-selected="false" tabindex="-1">Cerrar y cuadrar<small>Te dice si sobra o falta</small></button></li>
+        <li><button role="tab" id="p5" aria-controls="v5" aria-selected="false" tabindex="-1">IPV y ganancia<small>Inicio, entradas, vendido y final</small></button></li>
+      </ol>
+      <div>
+        <div class="panel" role="tabpanel" id="v1" aria-labelledby="p1">
+          <div class="pantalla"><img src="img/movil_vender.webp" width="600" height="1298" loading="lazy" alt="Pantalla de venta con el catálogo de productos por categorías y el ticket en curso"></div>
+          <div>
+            <h3>Vende en segundos</h3>
+            <ul>
+              <li><b>Toca el producto</b> en la cuadrícula, escanea su código de barras o búscalo por nombre.</li>
+              <li><b>No deja vender lo que no hay</b>: cada venta descuenta la existencia al momento.</li>
+              <li><b>Si se va la corriente</b>, el ticket a medias se queda guardado y sigues donde lo dejaste.</li>
+              <li>Cobras en CUP o USD, en efectivo, Transfermóvil o EnZona, o combinando pagos. El vuelto sale solo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="v2" aria-labelledby="p2" hidden>
+          <div class="pantalla"><img src="img/movil_caja_dueno.webp" width="600" height="1298" loading="lazy" alt="Caja del dueño con el saldo, un retiro de la caja y un depósito en el banco"></div>
+          <div>
+            <h3>Recoge el efectivo sin desordenar el cuadre</h3>
+            <ul>
+              <li><b>Retira efectivo</b> de la caja cuando quieras: el cuadre del turno lo descuenta solo.</li>
+              <li><b>La caja del dueño</b> suma lo retirado de todas las cajas, menos depósitos y pagos.</li>
+              <li>¿Hace falta cambio? <b>Repón efectivo</b> desde la caja del dueño.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="v3" aria-labelledby="p3" hidden>
+          <div class="pantalla"><img src="img/movil_billetes.webp" width="600" height="1298" loading="lazy" alt="Conteo de billetes: 9 de 1.000, 3 de 500 y 4 de 100 suman 10.900 CUP"></div>
+          <div>
+            <h3>Cuenta billetes, no sumas</h3>
+            <ul>
+              <li>Escribe <b>cuántos billetes hay de cada uno</b> y la app hace la cuenta.</li>
+              <li>Billetes de CUP del de 20.000 al de 1, y los de USD. <b>Si sale un billete nuevo, lo añades</b> y aparece en todas las cajas.</li>
+              <li>El desglose queda guardado en el cierre, por si hay que revisarlo después.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="v4" aria-labelledby="p4" hidden>
+          <div class="pantalla"><img src="img/movil_cierre.webp" width="600" height="1298" loading="lazy" alt="Cierre de caja con el resumen del turno, el retiro y el efectivo que debería haber"></div>
+          <div>
+            <h3>Cierra el turno y sabe al momento si cuadra</h3>
+            <ul>
+              <li>Resumen del turno: ventas, <b>cómo se cobró</b>, gastos y retiros.</li>
+              <li>Compara lo contado con lo que debería haber y te dice <b>cuánto sobra o falta</b>.</li>
+              <li>Saca el <b>informe del turno en PDF</b> para guardarlo o mandárselo al dueño.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="v5" aria-labelledby="p5" hidden>
+          <div class="pantalla"><img src="img/movil_ipv.webp" width="600" height="1298" loading="lazy" alt="IPV por producto: inicio, entradas, vendido, merma y existencia final"></div>
+          <div>
+            <h3>El IPV, hecho solo</h3>
+            <ul>
+              <li><b>Inicio, entradas, vendido, merma y final</b> de cada producto, por día, semana o mes.</li>
+              <li>Imprímelo o descárgalo en <b>PDF, Word o Excel</b>.</li>
+              <li>Los reportes te dicen las ventas, la ganancia, los gastos y la media por día.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dueno" aria-labelledby="t-dueno">
+  <div class="w">
+    <div class="dueno-cab">
+      <div class="cabeza">
+        <h2 id="t-dueno">Para el dueño: tu negocio a la vista, aunque no estés</h2>
+        <p class="sub">La misma app en Android, en el navegador y en la laptop. Todas las cajas comparten productos, precios y existencias.</p>
+      </div>
+      <div class="interruptor" role="group" aria-label="Apariencia de la captura">
+        <button type="button" aria-pressed="true" data-modo="dia">Día</button>
+        <button type="button" aria-pressed="false" data-modo="noche">Noche</button>
+      </div>
+    </div>
+    <div class="laptop">
+      <img id="captura-laptop" src="img/laptop_vender.webp" data-dia="img/laptop_vender.webp" data-noche="img/laptop_vender_noche.webp" width="1600" height="1000" loading="lazy" alt="Vertixh Pro en la computadora: pantalla de venta con el catálogo de productos">
+    </div>
+    <div class="ventajas">
+      <div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h4"/></svg>Panel web del dueño</h3>
+        <p>Desde cualquier navegador ves las ventas, los cobros por forma de pago, quién te debe y a quién le debes.</p>
+      </div>
+      <div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Cada uno con su PIN</h3>
+        <p>Dueño, jefe de turno y cajero. El cajero no ve costos ni ganancias, y solo el dueño o el jefe anulan ventas.</p>
+      </div>
+      <div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Historial de cada producto</h3>
+        <p>Cada entrada, venta, merma y traslado, con quién lo hizo y cuánto quedó.</p>
+      </div>
+      <div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg>Contabilidad e impuestos</h3>
+        <p>Libro diario, mayor y balance, y una estimación de los impuestos de la ONAT para tu declaración.</p>
+      </div>
+      <div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>Almacenes y compras</h3>
+        <p>Existencia por tienda y almacén, traspasos, compras a proveedores y lo que les debes.</p>
+      </div>
+      <div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM17 20h4v-3"/></svg>Catálogo con QR</h3>
+        <p>Tus clientes escanean un QR, ven tus productos y precios, y te piden por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="t-todo">
+  <div class="w">
+    <div class="cabeza"><h2 id="t-todo">Y todo lo demás que pide un negocio</h2></div>
+    <div class="lista">
+      <div><h3>Fiado con límite</h3><p>Ventas a crédito por cliente, con su límite, abonos y lo que debe cada uno.</p></div>
+      <div><h3>Pedidos a domicilio</h3><p>Cliente, dirección, hora de entrega y en qué estado va cada pedido.</p></div>
+      <div><h3>Gastos</h3><p>Transporte, electricidad, salarios… con su categoría, y si salieron de la caja.</p></div>
+      <div><h3>Impresora de tickets</h3><p>Térmica Bluetooth de 58 u 80 mm en el teléfono, cualquier impresora en la computadora. Abre el cajón al cobrar.</p></div>
+      <div><h3>Importa desde Excel</h3><p>Carga todo tu catálogo de una vez y saca una copia completa de tus datos cuando quieras.</p></div>
+      <div><h3>Etiquetas y códigos</h3><p>Imprime etiquetas con código de barras para los productos que no lo traen.</p></div>
+      <div><h3>Balanza</h3><p>Lee las etiquetas de la balanza: el producto y el peso en un solo escaneo.</p></div>
+      <div><h3>Día y noche</h3><p>Elige la apariencia, o deja que siga la del teléfono.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sinred" aria-labelledby="t-sinred">
+  <div class="w">
+    <div>
+      <h2 id="t-sinred">Sin internet, de verdad</h2>
+      <p class="sub">Vendes, cobras y cierras el turno sin datos ni WiFi. La conexión solo hace falta para que las cajas se pongan al día entre ellas y con la copia del servidor.</p>
+    </div>
+    <ul class="promesas">
+      <li><b>Todo funciona en el dispositivo</b><span>Ventas, mercancía y caja, aunque no haya cobertura.</span></li>
+      <li><b>Nada se pierde si se va la corriente</b><span>El ticket a medias se guarda y sigue donde lo dejaste.</span></li>
+      <li><b>Se sincroniza solo al volver la conexión</b><span>Y queda una copia en el servidor por si se pierde el teléfono.</span></li>
+      <li><b>Tus datos protegidos</b><span>En Android la base de datos va cifrada, y la app no tiene publicidad ni rastreo.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="planes" aria-labelledby="t-planes">
+  <div class="w">
+    <div class="cabeza">
+      <h2 id="t-planes">Prueba un mes gratis. Después, el plan de tu tamaño.</h2>
+      <p class="sub">Si se vence la licencia, tus datos no se borran.</p>
+    </div>
+    <div class="planes">
+      <article class="plan prueba">
+        <h3>Prueba gratis</h3>
+        <div class="precio">0 <small>CUP · 30 días</small></div>
+        <div class="limite">Todas las funciones del plan Pro</div>
+        <ul>
+          <li>Empiezas sin código ni pago</li>
+          <li>Tus datos se quedan al contratar</li>
+          <li>Una prueba por teléfono</li>
+        </ul>
+        <a class="boton b-verde" href="app/">Empezar ahora</a>
+      </article>
+      <article class="plan">
+        <h3>Vertixh Inicio</h3>
+        <div class="precio">500 <small>CUP al mes</small></div>
+        <div class="limite">1 dispositivo · 2 usuarios</div>
+        <ul>
+          <li>Punto de venta y tickets</li>
+          <li>Inventario e IPV</li>
+          <li>Cuadre de caja y retiros</li>
+          <li>Reportes de ventas y ganancia</li>
+        </ul>
+        <a class="boton b-contorno" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20contratar%20el%20plan%20Vertixh%20Inicio" rel="noopener">Pedir este plan</a>
+      </article>
+      <article class="plan recomendado">
+        <span class="etiqueta">Recomendado</span>
+        <h3>Vertixh Pro</h3>
+        <div class="precio">1.000 <small>CUP al mes</small></div>
+        <div class="limite">Hasta 3 dispositivos · 8 usuarios</div>
+        <ul>
+          <li>Todo lo de Inicio</li>
+          <li>Cobro en CUP y USD</li>
+          <li>Compras, proveedores y fiado</li>
+          <li>Almacenes y contabilidad</li>
+          <li>Catálogo QR y domicilios</li>
+        </ul>
+        <a class="boton b-azul" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20contratar%20el%20plan%20Vertixh%20Pro" rel="noopener">Pedir este plan</a>
+      </article>
+      <article class="plan">
+        <h3>Vertixh Empresa</h3>
+        <div class="precio">2.500 <small>CUP al mes</small></div>
+        <div class="limite">Dispositivos y usuarios sin límite</div>
+        <ul>
+          <li>Todas las funciones</li>
+          <li>Todas las cajas que necesites</li>
+          <li>Varias tiendas y almacenes</li>
+        </ul>
+        <a class="boton b-contorno" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20contratar%20el%20plan%20Vertixh%20Empresa" rel="noopener">Pedir este plan</a>
+      </article>
+    </div>
+    <p class="aviso-precios">Precios en CUP por mes, sujetos a cambios.</p>
+  </div>
+</section>
+
+<section id="empezar" aria-labelledby="t-empezar" style="padding-top:0">
+  <div class="w">
+    <div class="cabeza"><h2 id="t-empezar">Cómo empezar</h2></div>
+    <div class="empezar">
+      <div class="opcion">
+        <h3>En el navegador, ahora mismo</h3>
+        <p class="sub" style="font-size:1rem">Funciona en cualquier computadora o teléfono con Chrome, Firefox o Edge. Puedes instalarla como app desde el menú del navegador.</p>
+        <a class="boton b-azul" href="app/">Abrir Vertixh Pro</a>
+      </div>
+      <div class="opcion">
+        <h3>En tu teléfono Android</h3>
+        <p class="sub" style="font-size:1rem">Escríbenos y te mandamos el instalador por WhatsApp. Pronto estará también en Apklis, el Centro Cubano de Aplicaciones.</p>
+        <a class="boton b-azul" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20instalar%20Vertixh%20Pro%20en%20mi%20tel%C3%A9fono%20Android." rel="noopener">Pedir el instalador</a>
+        <ol class="instalar" aria-label="Si al instalar te sale un aviso">
+          <li><div class="mini" aria-hidden="true"><div class="barra"></div><div class="alerta">Por tu seguridad, el teléfono no permite instalar apps de esta fuente.</div><span class="btn">Configuración</span></div>Abre el archivo y, si sale el aviso, toca «Configuración».</li>
+          <li><div class="mini" aria-hidden="true"><div class="barra c"></div><div class="sw">Permitir de esta fuente <i></i></div><div class="barra"></div></div>Activa «Permitir de esta fuente».</li>
+          <li><div class="mini" aria-hidden="true"><div class="barra c"></div><div class="alerta">¿Quieres instalar Vertixh Pro?</div><span class="btn">Instalar</span></div>Vuelve atrás y toca «Instalar».</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guias" class="dueno" aria-labelledby="t-guias">
+  <div class="w">
+    <div class="cabeza">
+      <h2 id="t-guias">Guías para tu negocio</h2>
+      <p class="sub">Explicado paso a paso, con o sin Vertixh Pro.</p>
+    </div>
+    <div class="guias">
+      <a class="guia" href="guias/ipv-sin-libreta.html"><b>El IPV sin libreta: qué es y cómo hacerlo cada día</b><span>El IPV (Inventario de Productos Vendidos) es la hoja donde anotas, producto por producto, lo que había al empezar, lo que entró, lo que se vendió y lo…</span></a>
+      <a class="guia" href="guias/cuadre-de-caja.html"><b>Cómo cuadrar la caja al final del turno</b><span>Cuadrar la caja es comprobar que el efectivo que hay en la gaveta es el que debería haber según las ventas del turno. Si se hace todos los días, los…</span></a>
+      <a class="guia" href="guias/cobrar-cup-usd.html"><b>Cómo cobrar en CUP y USD sin equivocarte con la tasa</b><span>Muchos negocios cobran en pesos y en dólares a la vez. El error más común no es la cuenta: es usar una tasa distinta cada vez, o mezclar las dos…</span></a>
+      <a class="guia" href="guias/inventario-sin-internet.html"><b>Cómo llevar el inventario de una tienda sin internet</b><span>En Cuba la conexión se va cuando menos conviene. Un sistema de inventario que depende de internet deja de servir justo en el momento de vender. Lo que…</span></a>
+      <a class="guia" href="guias/punto-de-venta-cafeterias.html"><b>Punto de venta para cafeterías: lo que de verdad hace falta</b><span>Una cafetería vende muchos productos baratos, rápido y con cola. El sistema tiene que ayudar a cobrar en segundos y a saber al final del día cuánto se…</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" aria-labelledby="t-preguntas">
+  <div class="w">
+    <div class="cabeza"><h2 id="t-preguntas">Preguntas frecuentes</h2></div>
+    <div class="preguntas">
+      <details>
+        <summary>¿Necesito internet para vender?</summary>
+        <div class="respuesta">
+<p>No. Vertixh Pro funciona completo sin conexión: vendes, cobras, imprimes y cierras la caja igual. Cuando hay internet, la app sincroniza sola cada pocos minutos y sube todo al servidor. También puedes sincronizar cuando quieras con el botón de la nube, arriba a la derecha.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo empiezo?</summary>
+        <div class="respuesta">
+<ol>
+<li>Instala la app y escribe el código de activación que te dio tu proveedor.</li>
+<li>Crea tu PIN de dueño (4 a 6 números). No lo compartas.</li>
+<li>Carga tus productos: uno a uno, escaneando su código, o todos de golpe desde Excel en Productos → Importar desde Excel.</li>
+<li>Abre la caja y empieza a vender.</li>
+</ol>
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo pongo a vender a un dependiente en otro teléfono?</summary>
+        <div class="respuesta">
+<ol>
+<li>En tu teléfono, ve a Más → Usuarios y PIN y crea al dependiente como Cajero, con su propio PIN.</li>
+<li>En el teléfono del dependiente, instala la app y escribe el mismo código de activación de tu negocio.</li>
+<li>El dependiente entra con su PIN de cajero.</li>
+</ol>
+<p>Activa siempre tu teléfono (el del dueño) primero. Cada teléfono cuenta como un dispositivo de tu plan.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo veo desde mi teléfono lo que vende el dependiente?</summary>
+        <div class="respuesta">
+<p>Los dos teléfonos sincronizan solos cada 3 minutos cuando tienen internet. En Más → Turnos de caja ves cada turno: sus ventas, cómo se cobró, los gastos y el cuadre. Desde ahí puedes anular o corregir ventas sin abrir caja. También tienes los Reportes, el IPV y el panel web del dueño.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Me equivoqué en una venta, ¿cómo la corrijo?</summary>
+        <div class="respuesta">
+<p>En Ventas del turno (o en Turnos de caja, si eres el dueño) toca la venta:</p>
+<ul>
+<li><b>Anular venta:</b> la mercancía vuelve al inventario y el dinero deja de contar en la caja.</li>
+<li><b>Editar venta:</b> cambia cantidades, quita o agrega productos y cobra de nuevo. La venta original queda anulada como "Venta editada" y la corregida la reemplaza en el mismo turno.</li>
+</ul>
+<p>Solo el dueño o el jefe de turno pueden anular y editar.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Por qué no me deja vender un producto?</summary>
+        <div class="respuesta">
+<p>Porque no hay existencia suficiente. Vertixh Pro no deja vender lo que no hay. Dale entrada a la mercancía (en la ficha del producto → Entrada, o registrando la compra) y ya podrás venderlo.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo hago el cuadre al final del turno?</summary>
+        <div class="respuesta">
+<ol>
+<li>En la caja, menú de la caja → Cerrar caja: cuenta el efectivo y escribe lo que hay. La app te dice si sobra o falta.</li>
+<li>Imprime el cuadre del día (menú de la caja → Imprimir cuadre del día).</li>
+<li>Revisa el IPV (Más → IPV): inicio, entradas, vendido y final de cada producto. Puedes imprimirlo o descargarlo en PDF, Word o Excel.</li>
+</ol>
+        </div>
+      </details>
+      <details>
+        <summary>¿Puedo cobrar en dólares?</summary>
+        <div class="respuesta">
+<p>Sí, en los planes Vertixh Pro y Empresa. Fija la tasa del día en Más → Tasa del USD. Al cobrar puedes combinar pagos: parte en USD y parte en CUP, en efectivo, Transfermóvil o EnZona. El vuelto se calcula solo.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué pasa si se me rompe o pierdo el teléfono?</summary>
+        <div class="respuesta">
+<p>Todo lo que ya se sincronizó está a salvo en el servidor. Instala la app en otro teléfono, escribe tu código de activación y entra con tu PIN: se baja todo. Lo único que se pierde es lo que no llegó a sincronizarse; por eso conviene tener internet de vez en cuando.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Puedo usar la app en varios negocios?</summary>
+        <div class="respuesta">
+<p>Sí. En Más → Salir de este negocio, el teléfono sube todo lo pendiente y queda libre. Después escribes el código de activación del otro negocio. Los datos de cada negocio quedan separados y guardados en el servidor.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué impresoras sirven?</summary>
+        <div class="respuesta">
+<ul>
+<li><b>En el teléfono:</b> impresoras térmicas Bluetooth de 58 u 80 mm (ESC/POS). Se emparejan en el Bluetooth del teléfono y se eligen en Más → Tickets e impresora.</li>
+<li><b>En la computadora:</b> cualquier impresora instalada en el sistema.</li>
+</ul>
+<p>El cajón de dinero se conecta a la impresora térmica y se abre solo al cobrar en efectivo.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Los reportes de impuestos sirven para la ONAT?</summary>
+        <div class="respuesta">
+<p>Son una estimación hecha con tus ventas, gastos y las tasas que configures. Te ayudan a preparar la declaración, pero revísalos con tu contador antes de presentarlos.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué pasa si se vence mi licencia?</summary>
+        <div class="respuesta">
+<p>Tienes 7 días de gracia en los que todo sigue igual. Después, la app pasa a solo lectura: puedes ver tus datos y reportes, pero no vender, hasta que renueves. Tus datos no se borran.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Mis datos están seguros? ¿Quién los ve?</summary>
+        <div class="respuesta">
+<p>Tus datos son tuyos. Cada usuario entra con su PIN y solo ve lo que su rol permite (por ejemplo, el cajero no ve costos ni ganancias). El proveedor no vende ni comparte tus datos y solo los consulta si hace falta para darte soporte. Puedes pedir una copia completa de tus datos cuando quieras.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo pido ayuda?</summary>
+        <div class="respuesta">
+<p>Escribe o llama a Yan Carlos Llamaret Gómez (Llamaret Developer): +53 5925 2130 (también WhatsApp) o yllamaretgomez@gmail.com. Tienes los botones en Más → Ayuda y contacto.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="w">
+    <div class="final">
+      <div>
+        <h2>Pruébalo en tu negocio este mes</h2>
+        <p class="sub">Si tienes dudas, te contesta una persona por WhatsApp: +53 5925 2130.</p>
+      </div>
+      <div class="botones">
+        <a class="boton b-verde" href="app/">Probar gratis 30 días</a>
+        <a class="boton b-linea" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20probar%20Vertixh%20Pro%20en%20mi%20negocio." rel="noopener">Escríbenos</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <div>
+      <div class="firma">Vertixh Pro · Llamaret Developer</div>
+      <div>Yan Carlos Llamaret Gómez · Cuba · © 2026</div>
+      <div><a href="mailto:yllamaretgomez@gmail.com">yllamaretgomez@gmail.com</a> · +53 5925 2130</div>
+    </div>
+    <nav aria-label="Legal">
+      <a href="privacidad.html">Política de privacidad</a> ·
+      <a href="terminos.html">Términos y condiciones</a> ·
+      <a href="app/">Abrir la app</a>
+    </nav>
+  </div>
+</footer>
+
+<a class="flotante" href="https://wa.me/5359252130?text=Hola%2C%20quiero%20probar%20Vertixh%20Pro%20en%20mi%20negocio." rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5c-.1-.1-.6-1.3-.8-1.8s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+// Pasos del día: pestañas accesibles (clic, flechas, Inicio y Fin)
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.pasos [role=tab]'));
+  function elegir(t, foco) {
+    tabs.forEach(function (x) {
+      var sel = x === t;
+      x.setAttribute('aria-selected', sel);
+      x.tabIndex = sel ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !sel;
+    });
+    if (foco) t.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { elegir(t); });
+    t.addEventListener('keydown', function (e) {
+      var n = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+      if (n) { e.preventDefault(); elegir(tabs[(i + n + tabs.length) % tabs.length], true); }
+      if (e.key === 'Home') { e.preventDefault(); elegir(tabs[0], true); }
+      if (e.key === 'End') { e.preventDefault(); elegir(tabs[tabs.length - 1], true); }
+    });
+  });
+  // Día / noche en la captura de la computadora
+  var img = document.getElementById('captura-laptop');
+  document.querySelectorAll('.interruptor button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.interruptor button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      img.src = img.dataset[b.dataset.modo];
+    });
+  });
+})();
+</script>
+</body>
+</html>

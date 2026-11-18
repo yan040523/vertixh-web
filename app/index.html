@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Lo reemplaza "flutter build web --base-href /ruta/" (ver scripts/publicar_web.sh) -->
+  <base href="/vertixh-web/app/">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vertixh Pro: ventas, inventario y contabilidad para tu negocio. Funciona sin internet.">
+  <meta name="theme-color" content="#2457A6">
+
+  <!-- Instalable en el teléfono y en la computadora -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vertixh Pro">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+
+  <title>Vertixh Pro</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #FBF7F1; }
+    #carga { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center;
+             justify-content: center; gap: 18px; font: 600 15px system-ui, Segoe UI, Roboto, sans-serif;
+             color: #5E5A55; transition: opacity .3s; }
+    #carga img { width: 88px; height: 88px; }
+    #carga .barra { width: 160px; height: 4px; border-radius: 4px; background: #E8DFD2; overflow: hidden; }
+    #carga .barra i { display: block; width: 40%; height: 100%; background: #2457A6; border-radius: 4px;
+                      animation: ir 1.1s ease-in-out infinite; }
+    @keyframes ir { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+    @media (prefers-color-scheme: dark) { html, body { background: #15181F; } #carga { color: #B8B0A6; } }
+  </style>
+</head>
+<body>
+  <div id="carga">
+    <img src="icons/Icon-192.png" alt="Vertixh Pro">
+    <div class="barra"><i></i></div>
+    <div>Cargando Vertixh Pro…</div>
+  </div>
+  <script>
+    // La pantalla de carga se quita cuando la app dibuja su primera pantalla
+    window.addEventListener('flutter-first-frame', function () {
+      var c = document.getElementById('carga');
+      c.style.opacity = 0;
+      setTimeout(function () { c.remove(); }, 300);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
